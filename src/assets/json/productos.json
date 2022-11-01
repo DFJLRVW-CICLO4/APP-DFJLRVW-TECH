@@ -1,0 +1,45 @@
+[
+    {
+        "id": "1",
+        "url":"MonitorG.jpg",
+        "descripcion": "Monitor SPECTE 27 Pulgadas 60 Ghz",
+        "categoria": "Monitores",
+        "valor": "1000000"
+    },
+    {
+        "id": "2",
+        "url":"../img/MonitorL.jpg",
+        "descripcion": "Monitor LG 22 Pulgadas 60 Ghz",
+        "categoria": "Monitores",
+        "valor": "700000"
+    },
+    {
+        "id": "3",
+        "url":"../img/MouseG.jpg",
+        "descripcion": "Mouse Gamer RGB Logitech",
+        "categoria": "Mouse",
+        "valor": "300000"
+    },
+    {
+        "id": "4",
+        "url":"../img/MouseN.jpg",
+        "descripcion": "Mouse Inalambrico DELL",
+        "categoria": "Mouse",
+        "valor": "200000"
+    },
+    {
+        "id": "5",
+        "url":"../img/TecladoG.png",
+        "descripcion": "Teclado Gamer RGB Kalley",
+        "categoria": "Teclados",
+        "valor": "250000"
+    },
+    {
+        "id": "6",
+        "url":"../img/TecladoN.jpg",
+        "descripcion": "Teclado Basico Genius",
+        "categoria": "Teclados",
+        "valor": "40000"
+    }
+
+]

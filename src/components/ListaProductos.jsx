@@ -1,31 +1,46 @@
 import React from 'react'
-import imgProduct from '../img/MonitorG.jpg';
+import productosJSON from "../assets/json/productos.json";
 
 const ListaProductos = () => {
   return (
 <>
         <h1 className="title">PRODUCTOS</h1>
         <div className="productos">
-            <div className="producto">
-            <a href="#">
-            <div className="producto_img">
-            <img src={imgProduct} alt=""/>
-            </div>
-            </a>
-            <div className="producto_footer">
-                <h1> Monitor Gamer</h1>
-                <p> Categoria</p>
-                <p className="precio">$600.000</p>
-            </div>
-            <div className="bottom">
-                <button className="btn">
-                    Añadir al carrito
-                </button>
-                <div>
-                <a href="#" className="btn">Vista</a>
-                </div>
-            </div>
-            </div>
+
+{
+            productosJSON.map( producto =>{
+                return(
+                    <div className="producto">
+                        <a href="#">
+                            <div className="producto_img">
+                                <img className="producto_img" src={`src/img/${producto.url}`} alt=""/>                                  
+                            </div>              
+                        </a>
+
+                        <div className="producto_footer">
+                            <h1> {producto.descripcion}</h1>
+                            <p> {producto.categoria}</p>
+                            <p className="precio">{producto.valor}</p>
+                        </div>
+
+
+                        <div className="bottom">
+                            <button className="btn">
+                                Añadir al carrito
+                            </button>
+                                <div>
+                                <a href="#" className="btn">Vista</a>
+                                </div>
+                        </div>
+
+
+                    </div>
+                )
+            })
+}
+
+
+
         </div>
         </>
   )
