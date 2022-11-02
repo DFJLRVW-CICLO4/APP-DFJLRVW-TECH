@@ -9,6 +9,8 @@ Una vez clonado el proyecto requiere ejecutar los siguientes comandos
 git install
 
 
-Instalacion de boxicons requerido
+Instalaciones de paquetes requeridos
 
 npm install boxicons --save
+
+npm i react-router-dom
