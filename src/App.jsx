@@ -1,9 +1,17 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import Header from './components/Header';
-import ListaProductos from './components/ListaProductos';
+//import Header from './components/Header';
+import Home from './pages/Home';
+import Administrador from './pages/Administrador';
+import ComprasCarrito from './pages/ComprasCarrito';
+import ListaProductos from './pages/ListaProductos';
 import 'boxicons';
-//import './App.css'
+
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom';
+
 
 // Style
 import './assets/css/index.css'
@@ -13,9 +21,14 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <ListaProductos />
-      
+
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/productos' element={<ListaProductos/>}/>
+        <Route path='/admin' element={<Administrador/>}/>
+        <Route path='/carrito' element={<ComprasCarrito/>}/>
+      </Routes>
+   
     </div>
   )
 }

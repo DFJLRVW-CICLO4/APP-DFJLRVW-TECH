@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import imgLogo from '../img/LogoOficial.png'
 
 const Header = ({count}) => {
@@ -8,14 +9,17 @@ const Header = ({count}) => {
     <a href="#">
      <div className="logo"/>      
     </a>
-    <ul>
-        <li>
-            <a href="#" >INICIO</a>
-        </li>
-        <a href="#"> PRODUCTOS</a>
-    </ul>
+    <nav>
+          <ul>
+              <li><Link to="/" >INICIO</Link></li>
+              <li><Link to="/productos" >PRODUCTOS</Link></li>
+              <li><Link to="/admin" >Login</Link></li>
+          </ul>
+    </nav>
     <div className="cart">
-        <box-icon name="cart"></box-icon>
+        <Link to="/carrito" >
+          <box-icon name="cart"></box-icon>
+        </Link>
         <span className="item_total">0</span>
     </div>
 </header>

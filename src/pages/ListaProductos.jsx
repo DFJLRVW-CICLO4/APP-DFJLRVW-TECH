@@ -1,9 +1,18 @@
 import React from 'react'
+import Header from '../components/Header';
 import productosJSON from "../assets/json/productos.json";
+
+const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 0
+  })
+
 
 const ListaProductos = () => {
   return (
 <>
+<Header/>
         <h1 className="title">PRODUCTOS</h1>
         <div className="productos">
 
@@ -20,7 +29,7 @@ const ListaProductos = () => {
                         <div className="producto_footer">
                             <h1> {producto.descripcion}</h1>
                             <p> {producto.categoria}</p>
-                            <p className="precio">{producto.valor}</p>
+                            <p className="precio">{formatter.format(producto.valor)}</p>
                         </div>
 
 
